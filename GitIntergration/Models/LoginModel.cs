@@ -10,6 +10,15 @@ namespace GitIntergration.Models
     {
         public String Account { get; set; }
         public String Password { get; set; }
+        public LoginModel(String account,String password)
+        {
+            this.Account = account;
+            this.Password = password;
+        }
+        public String ReturnPassword()
+        {
+            return "1qaz2wsx";
+        }
 
     }
 }

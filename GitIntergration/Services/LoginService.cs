@@ -9,10 +9,15 @@ namespace GitIntergration.Services
 {
     class LoginService
     {
-        public void loginAct(String account,String password)
+        public bool loginAct(String account,String password)
         {
-            LoginModel loginModel = new LoginModel();
-
+            LoginModel loginModel = new LoginModel(account, password);
+            String tempPassword = loginModel.ReturnPassword();
+            if(tempPassword== loginModel.Password)
+            {
+                return true;
+            }
+            return false;
         }
 
     }
